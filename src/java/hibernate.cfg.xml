@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC '-//Hibernate/Hibernate Configuration DTD//EN' 'http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd'>
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.useUnicode">true</property>
+        <property name="connection.characterEncoding">UTF-8</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://node156672-onlineshopping.j.layershift.co.uk/user</property>
+        <property name="connection.username">user</property>
+        <property name="connection.password">Voxc4WE3RdhzUrgf</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.transaction.factory_class">
+            org.hibernate.transaction.JDBCTransactionFactory
+        </property>
+        <mapping resource="HibernateMapping/Customer.hbm.xml"/>
+        <mapping resource="HibernateMapping/ShoppingCart.hbm.xml"/>
+        <mapping resource="HibernateMapping/Product.hbm.xml"/>
+        <mapping resource="HibernateMapping/Order.hbm.xml"/>
+        <mapping resource="HibernateMapping/Orderdetail.hbm.xml"/>
+       
+        
+        
+    </session-factory>
+</hibernate-configuration>
+

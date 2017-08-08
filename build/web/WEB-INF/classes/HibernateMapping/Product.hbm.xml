@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC '-//Hibernate/Hibernate Mapping DTD 3.0//EN' 'http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd'>
+<hibernate-mapping> 
+    <class name="EntityCollection.ProductEntity" table="product">
+        <id name="productid" type="integer" column="pid">
+            <generator class="native" />
+        </id>
+        <property name="productname" type="string" column="pname" />
+        <property name="description" type="string" column="description" />
+        <property name="qty" type="integer" column="qty" />
+        <property name="price" type="integer" column="price" />
+        <property name="photopath" type="string" column="photopath" />
+        <property name="createtime" type="date" column="createtime" />
+        <property name="updatetime" type="date" column="updatetime" />
+        <property name="categoryid" type="integer" column="cid" />
+                  
+    </class>
+</hibernate-mapping>
+

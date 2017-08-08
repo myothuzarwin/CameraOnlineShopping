@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC '-//Hibernate/Hibernate Mapping DTD 3.0//EN' 'http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd'>
+<hibernate-mapping> 
+    <class name="EntityCollection.OrderEntity" table="order">
+        <id name="orderid" type="integer" column="oid">
+            <generator class="native" />
+        </id>
+        <property name="customerid" type="integer" column="customerid" />
+        <property name="orderdate" type="date" column="orderdate" />
+        <property name="receivername" type="string" column="receivername" />
+        <property name="receiveraddress" type="string" column="receiveraddress" />
+        <property name="receiverpostalcode" type="string" column="receiverpostalcode" />
+        <property name="receiverphno" type="string" column="receiverphno" />
+        <property name="receiveremail" type="string" column="receiveremail" />
+        <property name="delivery" type="string" column="delivery" />
+        <property name="payment" type="string" column="payment" />
+        <property name="SubTotal" type="integer" column="SubTotal" />
+        <property name="DiscPer" type="double" column="DiscPer" />
+        <property name="DiscAmt" type="double" column="DiscAmt" />
+        <property name="TotAmount" type="double" column="TotAmount" />
+                  
+    </class>
+</hibernate-mapping>
+

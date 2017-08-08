@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC '-//Hibernate/Hibernate Mapping DTD 3.0//EN' 'http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd'>
+<hibernate-mapping> 
+    <class name="EntityCollection.CustomerEntity" table="customer">
+        <id name="customerid" type="integer" column="customerid">
+            <generator class="native" />
+        </id>
+        <property name="customername" type="string" column="customername" />
+        <property name="birthday" type="date" column="birthday" />
+        <property name="gender" type="string" column="gender" />
+        <property name="postalcode" type="string" column="postalcode" />
+        <property name="phoneno" type="string" column="phoneno" />
+        <property name="address" type="string" column="address" />
+        <property name="emailaddress" type="string" column="emailaddress" />
+        <property name="password" type="string" column="password" />                
+    </class>
+</hibernate-mapping>
+

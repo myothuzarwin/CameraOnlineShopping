@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC '-//Hibernate/Hibernate Mapping DTD 3.0//EN' 'http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd'>
+<hibernate-mapping> 
+    <class name="EntityCollection.ShoppingCartEntity" table="shoppingcart">
+        <id name="shoppingcartid" type="integer" column="sid">
+            <generator class="native" />
+        </id>
+        <property name="customerid" type="integer" column="customerid" />
+        <property name="productid" type="integer" column="pid" />
+        <property name="productname" type="string" column="pname" />
+        <property name="qty" type="integer" column="qty" />
+        <property name="price" type="integer" column="price" />
+        <property name="createdtime" type="date" column="createdtime" />
+        <property name="updatedtime" type="date" column="updatedtime" />
+                  
+    </class>
+</hibernate-mapping>
+

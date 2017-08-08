@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE struts PUBLIC '-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN' 'http://struts.apache.org/dtds/struts-2.0.dtd'>
+<struts>
+    <package name="CameraOnlineShoppingPack" extends="struts-default">
+      
+        <action name="checklogin" class="Action.LoginAction" method="execute">
+            <result name="success">/login.jsp</result>
+        </action>
+        
+        <action name="login" class="Action.LoginAction" method="login">
+            <result name="success">/login.jsp</result>
+        </action>
+        
+        <action name="Authenticate" class="Action.CustomerAction" method="Authenticate">
+            <result name="success" type="redirectAction">productlist.action</result>
+            <result name="input">/login.jsp</result>
+        </action>
+        <action name="signout" class="Action.CustomerAction" method="signout">
+            <result name="success" type="redirectAction">productlist.action</result>
+            <result name="input">/login.jsp</result>
+        </action>
+        <action name="singnup" class="Action.CustomerAction" method="singnup">
+            <result name="success">/login.jsp</result>
+            <result name="input">/newcustomer.jsp</result>
+        </action>
+       
+        <action name="productlist" class="Action.ProductAction" method="productlist">
+            <result name="success">/productlist.jsp</result>
+        </action>
+        <action name="productdetail" class="Action.ProductAction" method="productdetail">
+            <result name="success">/productdetail.jsp</result>
+            <result name="fail" type="redirectAction">productlist.action</result>
+        </action>
+        <action name="productcategory" class="Action.ProductAction" method="productcategory">
+            <result name="success">/productlist.jsp</result>
+            <result name="fail" type="redirectAction">productlist.action</result>
+            
+        </action>
+        
+        <action name="bestproduct" class="Action.ProductAction" method="bestproduct">
+            <result name="success">/index.jsp</result>
+            
+        </action>
+        
+         <action name="reviewrating" class="Action.ProductAction" method="reviewrating">
+              <result name="success" type="redirectAction">productdetail.action</result>
+              
+           
+        </action>
+         <action name="rating" class="Action.ProductAction" method="rating">
+               
+               <result name="success" type="redirectAction">productdetail.action</result>
+           
+        </action>
+        <action name="viewcomment" class="Action.ProductAction" method="viewcomment">
+               <result name="success">/rating.jsp</result>
+           
+        </action>
+        
+        
+        <action name="shoppingcartlist" class="Action.ShoppingCartAction" method="shoppingcartlist">
+            <result name="success">/shoppingcart.jsp</result>
+        </action>
+        <action name="Addtocart" class="Action.ShoppingCartAction" method="Addtocart">
+            <result name="success" type="redirectAction">Addtocart.action</result>
+            <result name="fail" type="redirectAction">shoppingcartlist.action</result>
+        </action>
+        <action name="delete" class="Action.ShoppingCartAction" method="delete">
+            <result name="success" type="redirectAction">delete.action</result>
+            <result name="fail" type="redirectAction">shoppingcartlist.action</result>
+        </action>
+        <action name="update1" class="Action.ShoppingCartAction" method="update1">
+            <result name="success" type="redirectAction">update1.action</result>
+            <result name="fail" type="redirectAction">shoppingcartlist.action</result>
+        </action>
+        <action name="update2" class="Action.ShoppingCartAction" method="update2">
+            <result name="success" type="redirectAction">update2.action</result>
+            <result name="fail" type="redirectAction">shoppingcartlist.action</result>
+        </action>
+        <action name="orderaddress" class="Action.CheckoutAction" method="orderaddress">
+            <result name="success" type="redirect">/deliverymethod.jsp</result>
+            <result name="fail" type="redirectAction">orderaddress.action</result>
+        </action>
+        <action name="deliverymethod" class="Action.CheckoutAction" method="deliverymethod">
+            <result name="success" type="redirect">/paymentmethod.jsp</result>
+            <result name="fail" type="redirectAction">deliverymethod.action</result>
+        </action>
+        <action name="paymentmethod" class="Action.CheckoutAction" method="paymentmethod">
+            <result name="success">/orderreview.jsp</result>
+            <result name="fail" type="redirectAction">paymentmethod.action</result>
+        </action>
+        <action name="discountcustomer" class="Action.ShoppingCartAction" method="discountcustomer">
+            <result name="success" type="redirectAction">shoppingcartlist.action</result>
+            <result name="fail" type="redirect">/shoppingcartlist.jsp</result>
+        </action>
+        <action name="OrderAddressInit" class="Action.CheckoutAction" method="OrderAddressInit">
+            <result name="success">/orderaddress.jsp</result>
+        </action>
+        
+        <action name="placeorder" class="Action.CheckoutAction" method="placeorder">
+            <result name="success" type="redirectAction">productlist.action</result>
+            <result name="fail" type="redirectAction">/orderreview.jsp</result>
+        </action>
+        <action name="order" class="Action.OrderAction" method="order">
+            <result name="success">/myorder.jsp</result>
+            <result name="fail">/login.jsp</result>
+            <result name="forward">/viewdetail.jsp</result>
+        </action>
+        
+    </package>
+</struts>
